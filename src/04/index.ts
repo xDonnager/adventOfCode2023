@@ -1,7 +1,7 @@
 export const puzzleInput = "./input.txt";
 export const dirname = __dirname;
 export const callbackNormalization = (data: string) => data.split("\n");
-
+//TODO
 //"Card 1: 41 48 83 86 17 | 83 86  6 31 17  9 48 53"
 export const scratchcardsWorthValue = (data: Array<string>) => {
   let res = [];
