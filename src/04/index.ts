@@ -18,19 +18,22 @@ export const scratchcardsWorthValue = (data: Array<string>) => {
       .split(" ")
       .map((num) => +num);
 
-    const cardPoints = scratchNumbers.reduce((acc, cur) => {
+    const winners = scratchNumbers.reduce((acc, cur) => {
       const winner = winnerNumbers.includes(cur);
       if (!winner) {
         return acc;
       }
-      if (acc === 0) {
-        return (acc += 1);
-      }
-      return (acc *= 2);
-    }, 0);
+      return (acc = [...acc, cur]);
+    }, [] as Array<number>);
 
-    if (cardPoints > 0) {
-      res.push(cardPoints);
+    if (winners.length === 0) {
+      res.push(0);
+    } else if (winners.length === 1) {
+      res.push(1);
+    } else {
+      //const cardScore = 1 * 2 * (winners.length-1);
+      const cardScore = Math.pow(2, winners.length - 1);
+      res.push(cardScore);
     }
   }
   return res.reduce((acc, cur) => (acc += cur), 0);
