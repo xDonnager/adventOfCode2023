@@ -7,7 +7,7 @@
     "test": "npx jest --detectOpenHandles --forceExit --runInBand",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "test:one": "npx jest --detectOpenHandles --forceExit --runInBand --runTestsByPath './test/06/boatRaces.spec.ts' ",
+    "test:one": "npx jest --detectOpenHandles --forceExit --runInBand --runTestsByPath './test/07/camelCards.spec.ts' ",
     "go": "npx ts-node src/01/index.ts"
   },
   "keywords": [],
