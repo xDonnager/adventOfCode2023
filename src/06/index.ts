@@ -35,35 +35,17 @@ export const callbackNormalization = (data: string) => data.split("\n");
 const D = (time: number, distanceRecord: number) =>
   time * time - 4 * distanceRecord;
 
-const totalDistance = (speed: number, time: number) => speed * time;
+const totalDistance = (holdTime: number, time: number) => holdTime * (time-holdTime);
 
 type BeatBoatRecordParams = {
   time: Array<number>;
   distance: Array<number>;
 };
 export const beatBoatRecord = (data: BeatBoatRecordParams) => {
-  // const time = data[0]
-  //   .split(":")[1]
-  //   .trim()
-  //   .split(" ")
-  //   .reduce((acc: number[], cur: string) => {
-  //     if (cur !== "") {
-  //       acc.push(+cur);
-  //     }
-  //     return acc;
-  //   }, []);
-  // const distance = data[1]
-  //   .split(":")[1]
-  //   .trim()
-  //   .split(" ")
-  //   .reduce((acc: number[], cur: string) => {
-  //     if (cur !== "") {
-  //       acc.push(+cur);
-  //     }
-  //     return acc;
-  //   }, []);
 
-  const timeDistancePairs = [[data.time[0], data.distance[0]]];
+  const {time, distance} = data;
+  const timeDistancePairs  = time.map((t, i) => [t, distance[i]]);
+  //const timeDistancePairs = [[data.time[0], data.distance[0]]];
 
   let winningWays: Array<number> = [];
 
@@ -104,7 +86,7 @@ export const beatBoatRecord = (data: BeatBoatRecordParams) => {
     // walk longest forward until we stop winning
     while (true) {
       const t = longest + 1;
-      if (totalDistance(t, timeRecord) > timeRecord) {
+      if (totalDistance(t, timeRecord) > distanceRecord) {
         longest = t;
       } else {
         break;
