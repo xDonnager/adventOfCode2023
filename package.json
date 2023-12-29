@@ -7,7 +7,7 @@
     "test": "npx jest --detectOpenHandles --forceExit --runInBand",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "test:one": "npx jest --detectOpenHandles --forceExit --runInBand --runTestsByPath './test/07/camelCards.spec.ts' ",
+    "test:one": "npx jest --detectOpenHandles --forceExit --runInBand --runTestsByPath './test/08/hauntedWasteland.ts' ",
     "go": "npx ts-node src/01/index.ts"
   },
   "keywords": [],
