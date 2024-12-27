@@ -15,6 +15,9 @@ type ReadFile<T> = (
   params: readFileContentParams<T>
 ) => Promise<Result<Array<T>, string>>;
 
+export const splitcontentByNewLine = (data: string): Array<string> => data.split("\n");
+export const convertStringsToNumbers = (data: Array<string>):Array<number> => data.map((el)=> Number(el));
+
 export const readFileContent: ReadFile<string> = async ({
   paths,
   normalizeDataCallback,

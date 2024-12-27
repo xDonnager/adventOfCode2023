@@ -4,8 +4,8 @@ import {
   extractCalibrationValue,
   extractCalibrationValueLetters,
   puzzleInput,
-} from "../../src/01";
-import { readFileContent } from "../../src/utils";
+} from "../../../src/2023/01";
+import { readFileContent } from "../../../src/utils";
 
 describe("--- Day 1: Trebuchet?! ---", () => {
   it("P1: Should decode the calibration values dummy input", () => {

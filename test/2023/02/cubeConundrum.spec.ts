@@ -5,7 +5,7 @@ import {
   callbackNormalization,
   findPowerOfCubeSet,
 } from "../../src/02";
-import { readFileContent } from "../../src/utils";
+import { readFileContent } from "../../../src/utils";
 
 describe("--- Day 2: Cube Conundrum ---", () => {
   it("P1: should return 0", () => {

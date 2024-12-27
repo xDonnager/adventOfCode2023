@@ -4,7 +4,7 @@ import {
   puzzleInput,
   camelCards,
 } from "../../src/07";
-import { readFileContent } from "../../src/utils";
+import { readFileContent } from "../../../src/utils";
 // import { readFileContent } from "../../src/utils";
 
 describe("--- Day 7: Camel Cards ---", () => {

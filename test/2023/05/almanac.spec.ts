@@ -4,7 +4,7 @@ import {
   puzzleInput,
   scratchcardsWorthValue,
 } from "../../src/05";
-import { readFileContent } from "../../src/utils";
+import { readFileContent } from "../../../src/utils";
 
 describe("--- Day 5: If You Give A Seed A Fertilizer ---", () => {
   it("P1: Basic, should return 8", () => {

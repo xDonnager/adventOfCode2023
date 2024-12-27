@@ -4,7 +4,7 @@ import {
   puzzleInput,
   scratchcardsWorthValue,
 } from "../../src/04";
-import { readFileContent } from "../../src/utils";
+import { readFileContent } from "../../../src/utils";
 
 describe("--- Day 4: Scratchcards ---", () => {
   it("P1: Basic, should return 8", () => {
