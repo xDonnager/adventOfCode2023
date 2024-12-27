@@ -19,7 +19,6 @@ describe("--- Day 1: Red-Nosed Reports ---", () => {
         return acc;
       },0)
 
-      console.log(res)
       expect(res).toBe(2);
 
   });
@@ -37,15 +36,14 @@ describe("--- Day 1: Red-Nosed Reports ---", () => {
     const refurbish = inputStream.val.map((elements)=>{
       return elements.split(" ").map((el)=> Number(el))
     })
-    console.log(refurbish)
-    // const inputNums = convertStringsToNumbers(inputStream.val)
-    // const res = inputNums.reduce((acc,cur)=> {
-    //   if(isReportSafe(cur)){
-    //     acc++
-    //   }
-    //   return acc;
-    // },0)
-    // console.log(res)
+
+    const res = refurbish.reduce((acc,cur)=> {
+      if(isReportSafe(cur)){
+        acc++
+      }
+      return acc;
+    },0)
+    expect(res).toBe(282);
 
   })
 

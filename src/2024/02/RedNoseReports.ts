@@ -18,7 +18,7 @@ const isReportDecreasing = (report:Array<number>):boolean =>{
 const changeInThreshold = (report:Array<number>):boolean=>{
     for (let i = 0; i < report.length-1; i++) {
       const step = Math.abs(report[i]-report[i + 1])
-      console.log('step',step)
+      // console.log('step',step)
       if (step < 1 || step > 3  ) {
         return false;
       }  
@@ -27,14 +27,14 @@ const changeInThreshold = (report:Array<number>):boolean=>{
   }
   
 export const isReportSafe = (report:Array<number>):boolean =>{
-    console.log('report',report)
-    console.log('increasing', isReportIncreasing(report))
-    console.log('decreasing', isReportDecreasing(report))
+    // console.log('report',report)
+    // console.log('increasing', isReportIncreasing(report))
+    // console.log('decreasing', isReportDecreasing(report))
     
     if(!isReportIncreasing(report) && !isReportDecreasing(report)){
       return false;
     }
-    console.log('changes ok?', changeInThreshold(report))
+    // console.log('changes ok?', changeInThreshold(report))
     
     if(!changeInThreshold(report)){
       return false
