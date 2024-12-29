@@ -4,7 +4,7 @@ import {
   splitContentByNewLineAndCreateArrays,
   splitContentByNewLineAndCreateLists
 } from "../../src/2024/01/HistorianHysteria";
-import { readFileContent, splitcontentByNewLine } from "../../src/utils";
+import { readFileContentAndNormalizeData, splitcontentByNewLine } from "../../src/utils";
 
 describe("--- Day 1: Historian Hysteria ---", () => {
   it("P1 Should run simple case", async () => {
@@ -22,7 +22,7 @@ describe("--- Day 1: Historian Hysteria ---", () => {
     //console.log(sumDistances)
   });
   it("P1 Should rsolve the input puzzle", async () => {
-    const inputStream = await readFileContent({
+    const inputStream = await readFileContentAndNormalizeData({
       paths: ['/home/user/adventOfCode2023/src/2024/01/input.txt'],
       normalizeDataCallback: splitcontentByNewLine
     })
@@ -57,7 +57,7 @@ describe("--- Day 1: Historian Hysteria ---", () => {
 
   });
   it("P2 Should resolve the input puzzle", async () => {
-    const inputStream = await readFileContent({
+    const inputStream = await readFileContentAndNormalizeData({
       paths: ['/home/user/adventOfCode2023/src/2024/01/input.txt'],
       normalizeDataCallback: splitcontentByNewLine
     })
